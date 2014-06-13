@@ -11,13 +11,19 @@ For the instructor's grades, your code will very likely be graded _automatically
 
          #!/usr/bin/python
 
-   and giving the executable file permission via
-
-         $ chmod 755 <filename>.py
-
  - and try to reproduce the sample output as closely as possible.
 
 Is automated grading perfect? Of course not. That's where the peer grading comes in. Grading by your peers will hopefully balance out the shortcomings of automated grading. If you think you were graded unfairly due to a bug in the automated grading program, please contact Edward at <jkim575@illinois.edu>.
+
+### Submission
+
+When you are ready to submit your work for grading, make sure that the name of your file is in `<firstname>-<lastname>-<projectname>.py` format, and submit your assignment as separate `.py` files in the Workshop. To get a full credit for this week's assignment you must upload:
+
+ - `<firstname>-<lastname>-hello.py`
+ - `<firstname>-<lastname>-print100.py`
+ - `<firstname>-<lastname>-stats.py`
+
+Did I mention that you __must__ use the provided template files and __must not__ change the function names?
 
 ### Problem 1. The obligatory "Hello World" problem.
 
