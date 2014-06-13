@@ -5,7 +5,7 @@
 For the instructor's grades, your code will very likely be graded _automatically_ using Bash and Python scripts written by the TA. Thus, it is important that you
  
  - read the instructions carefully,
- - use the template file `<firstname>-<lastname>-<projectname>.py` that corresponds to each problem,
+ - grab the template file `<firstname>-<lastname>-<projectname>.py` that corresponds to each problem from [GitHub](https://github.com/INFO490/assignments),
  - __do not__ change the function names or arguments if they are given in the template files,
  - make your Python code executable by writing on the first line of your `.py` file
 
@@ -39,7 +39,7 @@ the output on the next line should be
 
         Hello, World!
 
- - Use the template file [FirstName-LastName-hello.py](FirstName-LastName-hello.py).
+ - Use the template file [FirstName-LastName-hello.py](https://github.com/INFO490/assignments/blob/master/hw2/FirstName-LastName-hello.py).
  - Make the file executable.
  - Use `input()` or `raw_input()` function to accept an input from the user and store it in a string variable.
  - Use `print()` function to print the welcome message on the screen.
@@ -63,13 +63,13 @@ Your final output should be
 
         1, 2, 3, info, 5, matics, 7, info, 9, 10, 11, informatics, 13, 14, 15, info, 17, matics, 19, info, 21, 22, 23, informatics, 25, 26, 27, info, 29, matics, 31, info, 33, 34, 35, informatics, 37, 38, 39, info, 41, matics, 43, info, 45, 46, 47, informatics, 49, 50, 51, info, 53, matics, 55, info, 57, 58, 59, informatics, 61, 62, 63, info, 65, matics, 67, info, 69, 70, 71, informatics, 73, 74, 75, info, 77, matics, 79, info, 81, 82, 83, informatics, 85, 86, 87, info, 89, matics, 91, info, 93, 94, 95, informatics, 97, 98, 99, info                                                                       
 
-Use the template file [FirstName-LastName-print100.py](FirstName-LastName-print100.py).
+Use the template file [FirstName-LastName-print100.py](https://github.com/INFO490/assignments/blob/master/hw2/FirstName-LastName-print100.py).
 
 ### Problem 3. Simple statistics.
 
 In this problem, you will write a function that takes a list of numbers and returns a tuple of the minimum, maximum, mean, and median values.
 
- - Use the template file [FirstName-LastName-stats.py](FirstName-LastName-stats.py).
+ - Use the template file [FirstName-LastName-stats.py](https://github.com/INFO490/assignments/blob/master/hw2/FirstName-LastName-stats.py).
  - `GetStats()` takes one argument, which should be a list of integers.
  - `GetStats()` returns a tuple `(minimum, maximum, mean, median)`. The minimum and maximum values can be integers, but mean and median must be returned as floats.
 
