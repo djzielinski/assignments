@@ -23,27 +23,27 @@
 # Use Python 3 print() function, Python 3 integer division
 from __future__ import print_function, division
 
-def GetStats(aList):
+def getStats(aList):
     '''
     Accepts a list of integers, and returns a tuple of four numbers:
     minimum(int), maximum(int), mean(float), and median(float)
 
-    >>> GetStats([0, 1, 2, 3, 4])
+    >>> getStats([0, 1, 2, 3, 4])
     (0, 4, 2.0, 2.0)
-    >>> GetStats([0, 1, 2, 3, 4, 5])
+    >>> getStats([0, 1, 2, 3, 4, 5])
     (0, 5, 2.5, 2.5)
-    >>> GetStats([0, 1, 2, 5])
+    >>> getStats([0, 1, 2, 5])
     (0, 5, 2.0, 1.5)
-    >>> GetStats([0, 1, 2, 4, 5])
+    >>> getStats([0, 1, 2, 4, 5])
     (0, 5, 2.4, 2.0)
     ''' 
     
     ######### WRITE YOUR CODE HERE #########
 
-    return (minVal, maxVal, mean, median)
+    return (minimum, maximum, mean, median)
     
 if __name__ == '__main__':
 
     myList = # Use range() to generate a list
     
-    print("Minimum: %i\nMaximum: %i\nMean: %.1f\nMedian: %.1f" % GetStats(myList))
+    print("Minimum: %i\nMaximum: %i\nMean: %.1f\nMedian: %.1f" % getStats(myList))
