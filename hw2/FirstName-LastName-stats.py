@@ -23,7 +23,7 @@
 # Use Python 3 print() function, Python 3 integer division
 from __future__ import print_function, division
 
-def get_stats(aList):
+def get_stats(input_list):
     '''
     Accepts a list of integers, and returns a tuple of four numbers:
     minimum(int), maximum(int), mean(float), and median(float)
