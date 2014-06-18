@@ -40,7 +40,7 @@ def getStats(aList):
     
     ######### WRITE YOUR CODE HERE #########
 
-    return (minimum, maximum, mean, median)
+    return minimum, maximum, mean, median
     
 if __name__ == '__main__':
 
