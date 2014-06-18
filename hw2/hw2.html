@@ -15,7 +15,7 @@
 <li><p>and try to reproduce the sample output as closely as possible.</p></li>
 </ul>
 
-<p>Is automated grading perfect? Of course not. That's where the peer grading comes in. Grading by your peers will hopefully balance out the shortcomings of automated grading. If you think you were graded unfairly due to a bug in the automated grading program, please contact Edward at <a href="&#x6D;&#x61;&#x69;&#108;&#116;&#111;:&#106;&#x6B;i&#x6D;&#x35;&#x37;5&#64;&#105;&#108;&#108;&#x69;&#x6E;&#111;&#105;&#x73;&#46;&#x65;&#100;&#x75;">&#106;&#x6B;i&#x6D;&#x35;&#x37;5&#64;&#105;&#108;&#108;&#x69;&#x6E;&#111;&#105;&#x73;&#46;&#x65;&#100;&#x75;</a>.</p>
+<p>Is automated grading perfect? Of course not. That's where the peer grading comes in. Grading by your peers will hopefully balance out the shortcomings of automated grading. If you think you were graded unfairly due to a bug in the automated grading program, please contact Edward at <a href="&#109;&#97;i&#x6C;&#x74;&#111;:&#106;&#x6B;i&#x6D;&#53;&#55;5&#64;i&#108;&#x6C;&#x69;&#x6E;&#x6F;&#x69;&#x73;.&#101;&#x64;&#x75;">&#106;&#x6B;i&#x6D;&#53;&#55;5&#64;i&#108;&#x6C;&#x69;&#x6E;&#x6F;&#x69;&#x73;.&#101;&#x64;&#x75;</a>.</p>
 
 <h3>Submission</h3>
 
@@ -68,7 +68,7 @@
 
 <ul>
 <li>Make the file executable.</li>
-<li>Write a function named <code>listInformatics()</code> that takes no argument and returns a list of strings. (Use <code>str()</code> to convert numbers into strings.)</li>
+<li>Write a function named <code>list_informatics()</code> that takes no argument and returns a list of strings. (Use <code>str()</code> to convert numbers into strings.)</li>
 <li>The <code>print()</code> function must appear only once in your program in the <code>main()</code> function.</li>
 </ul>
 
@@ -85,15 +85,15 @@
 
 <ul>
 <li>Use the template file <a href="https://github.com/INFO490/assignments/blob/master/hw2/FirstName-LastName-stats.py">FirstName-LastName-stats.py</a>.</li>
-<li><code>getStats()</code> takes one argument, which should be a list of integers.</li>
-<li><code>getStats()</code> returns a tuple <code>(minimum, maximum, mean, median)</code>. The minimum and maximum values can be integers, but mean and median must be returned as floats.</li>
+<li><code>get_stats()</code> takes one argument, which should be a list of integers.</li>
+<li><code>get_stats()</code> returns a tuple <code>(minimum, maximum, mean, median)</code>. The minimum and maximum values can be integers, but mean and median must be returned as floats.</li>
 </ul>
 
 <p>In the <code>main()</code> function, you should do the following:</p>
 
 <ul>
 <li>Generate a list of numbers from 0 to 50 by using <code>range()</code>.</li>
-<li>Pass the above list to <code>getStats()</code> as an argument.</li>
+<li>Pass the above list to <code>get_stats()</code> as an argument.</li>
 <li>Use the returned tuple to print out the minimum, maximum, mean, and median values in a nicely formatted manner. (If there is an even number of values in the list, there is no single middle value; in this case, take the median to be the mean of the two middle values.)</li>
 </ul>
 
@@ -108,15 +108,15 @@
 <p>Although not required for this problem, it would be a good exercise to play around with this function and see if you can improve it. For example, try passing a <em>shuffled</em> list, which you can generate by</p>
 
 <pre><code>    &gt;&gt;&gt; from random import shuffle
-    &gt;&gt;&gt; myList = [1, 2, 3, 4, 5]
-    &gt;&gt;&gt; shuffle(myList)
-    &gt;&gt;&gt; print(myList)
+    &gt;&gt;&gt; my_list = [1, 2, 3, 4, 5]
+    &gt;&gt;&gt; shuffle(my_list)
+    &gt;&gt;&gt; print(my_list)
     [3, 2, 1, 5, 4]
 </code></pre>
 
 <p>or try passing a list with repeated values, e.g.</p>
 
-<pre><code>    myList = [1, 1, 2, 2, 3, 4, 5]
+<pre><code>    my_list = [1, 1, 2, 2, 3, 4, 5]
 </code></pre>
 
 <p>Does your function behave as expected?</p>

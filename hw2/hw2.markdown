@@ -56,7 +56,7 @@ This problem is a famous programming job interview question designed to filter o
 Since you have a week to solve this problem and don't have to think on your feet like in a job interview, let's make this problem a little more interesting.
 
  - Make the file executable.
- - Write a function named `listInformatics()` that takes no argument and returns a list of strings. (Use `str()` to convert numbers into strings.)
+ - Write a function named `list_informatics()` that takes no argument and returns a list of strings. (Use `str()` to convert numbers into strings.)
  - The `print()` function must appear only once in your program in the `main()` function.
 
 Your final output should be
@@ -70,13 +70,13 @@ Use the template file [FirstName-LastName-print100.py](https://github.com/INFO49
 In this problem, you will write a function that takes a list of numbers and returns a tuple of the minimum, maximum, mean, and median values.
 
  - Use the template file [FirstName-LastName-stats.py](https://github.com/INFO490/assignments/blob/master/hw2/FirstName-LastName-stats.py).
- - `getStats()` takes one argument, which should be a list of integers.
- - `getStats()` returns a tuple `(minimum, maximum, mean, median)`. The minimum and maximum values can be integers, but mean and median must be returned as floats.
+ - `get_stats()` takes one argument, which should be a list of integers.
+ - `get_stats()` returns a tuple `(minimum, maximum, mean, median)`. The minimum and maximum values can be integers, but mean and median must be returned as floats.
 
 In the `main()` function, you should do the following:
  
  - Generate a list of numbers from 0 to 50 by using `range()`.
- - Pass the above list to `getStats()` as an argument.
+ - Pass the above list to `get_stats()` as an argument.
  - Use the returned tuple to print out the minimum, maximum, mean, and median values in a nicely formatted manner. (If there is an even number of values in the list, there is no single middle value; in this case, take the median to be the mean of the two middle values.)
 
 Your output should be something like
@@ -89,13 +89,13 @@ Your output should be something like
 Although not required for this problem, it would be a good exercise to play around with this function and see if you can improve it. For example, try passing a _shuffled_ list, which you can generate by
 
         >>> from random import shuffle
-        >>> myList = [1, 2, 3, 4, 5]
-        >>> shuffle(myList)
-        >>> print(myList)
+        >>> my_list = [1, 2, 3, 4, 5]
+        >>> shuffle(my_list)
+        >>> print(my_list)
         [3, 2, 1, 5, 4]
 
 or try passing a list with repeated values, e.g.
 
-        myList = [1, 1, 2, 2, 3, 4, 5]
+        my_list = [1, 1, 2, 2, 3, 4, 5]
 
 Does your function behave as expected?
