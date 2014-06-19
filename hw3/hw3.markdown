@@ -1,5 +1,5 @@
 ## Week 3 Assignment
-
+n
 ### Problem 1. Simple statistics revisited.
 
 - Grab the template file: [stats2.py](https://github.com/INFO490/assignments/blob/master/hw3/FirstName-LastName-stats2.py).
@@ -10,20 +10,22 @@ This problem is a continuation of problem 3 from last week's assignment. Recall 
 
 In case you couldn't write this function, you can use my version of [stats.py](https://github.com/INFO490/assignments/blob/master/hw3/stats.py) on GitHub.
 
-We will use this function to compute basic statistics of the same four columns we extracted from the Illinois census data in week 1 (`ss12pil.csv`). Namely, we will use the following columns:
+We will use this function to compute basic statistics of the same four columns we extracted from the Illinois census data `ss12pil.csv` in week 1. Namely, we will use the following columns:
 
 - Column 7, "PWGTP": the integer weight of each person,
 - Column 8, "AGEP": the person's age,
 - Column 40, "MARHT": the number of times married, and
 - Column 73, "WKHP": the usual hours worked per week past 12 months,
 
-where the first column is column 1 (rather than 0). Note that "MARHT" and "WKHP" columns have empty fields (which you should be able to check with `awk` command). The empty fields correspond to zero, so you have to devise a way to replace all `''`'s with integer `0`.
+where the first column is column 1 (rather than 0). Note that "MARHT" and "WKHP" columns have empty fields (which you should be able to check with `awk` command). The empty fields correspond to zero, so you have to devise a way to replace all `''`s with integer `0`.
 
 To extract these columns from the CSV file,
 
 - Write a function named `get_column(filename, column, header = True)` that reads the column X from a file and returns a list of integers.
 
 You may assume that the column is made of integers. We will also use the optional argument `header` because the first line of our file lists the names of the columns, but we might want to turn this off to handle a file that doesn't have a header.
+
+- Use a combination of `with` statement and `open()` function to open `filename` in the `get_column()` function.
 
 We also want to print out the results in a nicely formatted manner.
 
@@ -38,9 +40,11 @@ that takes a list of integers and prints out the basic statistics, e.g.
         Mean: 3.0
         Median: 3.0
 
-- Use the imported `get_stats()` function here to calculate the statistics of `input_list` and print them out.
+- Use the imported `get_stats()` function inside the `print_stats()` function to calculate the statistics of `input_list` and print them out.
 
-If the `get_stats()` function you wrote cannot handle __un__ordered lists, you have to first sort the `input_list` using `sort()` method or `sorted()` before passing it to `get_stats()`.
+If the `get_stats()` function you wrote cannot handle **un**ordered lists, you have to first sort the `input_list` using `sort()` method or `sorted()` before passing it to `get_stats()`.
+
+- Rename `<firstname>-<lastname>-stats2.py` and upload it to Moodle.
 
 ### Problem 2. Using a class to represent an individual person.
 
@@ -84,6 +88,7 @@ The output should be
         Column 8 is: 5
         Column 9 is: 
 
+- Rename `<firstname>-<lastname>-person.py` and upload it to Moodle.
 
 ### Problem 3. Simple statistics using Numpy.
 
@@ -110,6 +115,8 @@ As in problem 1, you should write a `print_stats()` function, but this time,
 
 - Use NumPy methods: [`min()` or `amin()`](http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.min.html), [`max()` or `amax()`](http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.max.html), [`mean()`](http://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html), and [`median()`](http://docs.scipy.org/doc/numpy/reference/generated/numpy.median.html).
 
+- Rename `<firstname>-<lastname>-npstats.py` and upload it to Moodle.
+
 Why use NumPy? In addition to providing useful mathematical functions, NumPy is much faster than pure Python. In IPython, you can determine how long a process takes to complete with `%time` or `%timeit`, or in the Unix environment, you can simply do
 
         $ time ./stats2.py
@@ -124,4 +131,4 @@ Why use NumPy? In addition to providing useful mathematical functions, NumPy is 
         user    0m8.276s
         sys     0m0.252s
 
-For reading a CSV file and calculating four basic statistics, NumPy is twice as fast as pure Python on my computer.
+For the task of calculating basic statistics of four columns in a CSV file with 127k rows, NumPy is twice as fast as pure Python on my computer.
