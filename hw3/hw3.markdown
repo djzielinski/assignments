@@ -1,5 +1,15 @@
 ## Week 3 Assignment
 
+### Submission
+
+When you are ready to submit your work for grading, make sure that the name of your file is in `<firstname>-<lastname>-<projectname>.py` format, and submit your assignment as separate `.py` files in the Workshop. To get a full credit for this week's assignment you must upload three files:
+
+ - `<firstname>-<lastname>-stats2.py`
+ - `<firstname>-<lastname>-person.py`
+ - `<firstname>-<lastname>-npstats.py`
+
+Please use the provided template files and do not change the function names?
+
 ### Problem 1. Simple statistics revisited.
 
 - Grab the template file: [stats2.py](https://github.com/INFO490/assignments/blob/master/hw3/FirstName-LastName-stats2.py).
