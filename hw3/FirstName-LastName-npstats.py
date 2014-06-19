@@ -18,14 +18,32 @@ def get_columns(filename):
     >>> get_columns('ss12pil.csv')[0, :10]
     array([ 200.,   70.,  212.,   15.,   71.,   80.,   95.,  131.,  147.,  149.])
     '''
-
-    # your code goes here
+    result = np.loadtxt( # your code goes here )
     
     return result
     
 def print_stats(input_array, title = None):
     '''
-    Takes a numpy array and prints out minimum, maximum, mean, and median.
+    Computes minimum, maximum, mean, and median using numpy functions,
+      and prints them out in a nice format.
+
+    Parameters:
+      input_array(numpy.ndarray): a numpy array representing a column
+      title(str): Optional. If given, title is printed out before the stats.
+
+    Examples:
+    >>> import numpy as np
+    >>> print_stats(np.array([1, 2, 3, 4, 5]))
+    Minimum: 1
+    Maximum: 5
+    Mean: 3.0
+    Median: 3.0
+    >>> print_stats(np.array([1, 2, 3, 4, 5, 6]), 'Stats!')
+    Stats!
+    Minimum: 1
+    Maximum: 6
+    Mean: 3.5
+    Median: 3.5
     '''
 
     # your code goes here

@@ -44,7 +44,7 @@ def print_stats(input_list, title = None):
     Maximum: 49
     Mean: 24.5
     Median: 24.5
-    >>> print_stats(range(100), title = 'Stats!')
+    >>> print_stats(range(100), 'Stats!')
     Stats!
     Minimum: 0
     Maximum: 99
