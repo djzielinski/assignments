@@ -1,5 +1,5 @@
 ## Week 3 Assignment
-n
+
 ### Problem 1. Simple statistics revisited.
 
 - Grab the template file: [stats2.py](https://github.com/INFO490/assignments/blob/master/hw3/FirstName-LastName-stats2.py).
@@ -42,7 +42,7 @@ that takes a list of integers and prints out the basic statistics, e.g.
 
 - Use the imported `get_stats()` function inside the `print_stats()` function to calculate the statistics of `input_list` and print them out.
 
-If the `get_stats()` function you wrote cannot handle _un_ordered lists, you have to first sort the `input_list` using `sort()` method or `sorted()` before passing it to `get_stats()`.
+If the `get_stats()` function you wrote cannot handle <b>un</b>ordered lists, you have to first sort the `input_list` using `sort()` method or `sorted()` before passing it to `get_stats()`.
 
 - Rename `<firstname>-<lastname>-stats2.py` and upload it to Moodle.
 
