@@ -136,7 +136,7 @@ Do you remember from problem 1 that some columns had empty fields, which should 
 
 As in problem 1, you should write a `print_stats()` function, but this time,
 
-- Use NumPy methods: [numpy.min() or numpy.amin()](http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.min.html), numpy.max() or numpy.amax()](http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.max.html), [numpy.mean()](http://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html), and [numpy.median()](http://docs.scipy.org/doc/numpy/reference/generated/numpy.median.html).
+- Use NumPy methods: [numpy.min() or numpy.amin()](http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.min.html), [numpy.max() or numpy.amax()](http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.max.html), [numpy.mean()](http://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html), and [numpy.median()](http://docs.scipy.org/doc/numpy/reference/generated/numpy.median.html).
 
 In the `main()` function,
 
