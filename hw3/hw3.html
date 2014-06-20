@@ -1,0 +1,211 @@
+<h2>Week 3 Assignment</h2>
+
+<h3>Submission instructions</h3>
+
+<p>When you are ready to submit your work for grading, make sure that the name of your file is in <code>&lt;firstname&gt;-&lt;lastname&gt;-&lt;projectname&gt;.py</code> format, and submit your assignment as separate <code>.py</code> files in the Workshop. To get a full credit for this week's assignment you must upload three files:</p>
+
+<ul>
+<li><code>&lt;firstname&gt;-&lt;lastname&gt;-stats2.py</code></li>
+<li><code>&lt;firstname&gt;-&lt;lastname&gt;-person.py</code></li>
+<li><code>&lt;firstname&gt;-&lt;lastname&gt;-npstats.py</code></li>
+</ul>
+
+<p>Please use the provided template files and do not change the function names.</p>
+
+<h3>Problem 1. Simple statistics revisited.</h3>
+
+<ul>
+<li>Grab the template file: <a href="https://github.com/INFO490/assignments/blob/master/hw3/FirstName-LastName-stats2.py">stats2.py</a>.</li>
+</ul>
+
+<p>This problem is a continuation of problem 3 from last week's assignment. Recall that you wrote a function named <code>get_stats()</code> that takes a list and returns a tuple of minimum, maximum, mean, and median. To use this function, rename your <code>.py</code> file from problem 3 to <code>stats.py</code> and import it as a module:</p>
+
+<pre><code>    from stats import get_stats
+</code></pre>
+
+<p>In case you couldn't write this function, you can use my version of <a href="https://github.com/INFO490/assignments/blob/master/hw3/stats.py">stats.py</a> on GitHub.</p>
+
+<p>We will use this function to compute basic statistics of the same four columns we extracted from the Illinois census data <code>ss12pil.csv</code> in week 1. Namely, we will use the following columns:</p>
+
+<ul>
+<li>Column 7, "PWGTP": the integer weight of each person,</li>
+<li>Column 8, "AGEP": the person's age,</li>
+<li>Column 40, "MARHT": the number of times married, and</li>
+<li>Column 73, "WKHP": the usual hours worked per week past 12 months,</li>
+</ul>
+
+<p>where the first column is column 1 (rather than 0). Note that "MARHT" and "WKHP" columns have empty fields (which you should be able to check with <code>awk</code> command). The empty fields correspond to zero, so you have to devise a way to replace all <code>''</code>s with integer 0.</p>
+
+<p>To extract these columns from the CSV file,</p>
+
+<ul>
+<li>Write a function named <code>get_column(filename, n, header = True)</code> that reads the <code>n</code>-th column from a file and returns a list of integers.</li>
+</ul>
+
+<p>You may assume that the column is made of integers. We will also use the optional argument <code>header</code> because the first line of our file lists the names of the columns, but we might want to turn this off to handle a file that doesn't have a header.</p>
+
+<ul>
+<li>Use a combination of <code>with</code> statement and <code>open()</code> function to open <code>filename</code> in the <code>get_column()</code> function.</li>
+<li>Skip the first line if the <code>header</code> parameter is <code>True</code>; do not skip if it's <code>False</code>.</li>
+<li>If the <code>n</code>-th column is blank, assume it is 0.</li>
+</ul>
+
+<p>We also want to print out the results in a nicely formatted manner.</p>
+
+<ul>
+<li>Write a function named <code>print_stats(input_list, title = None)</code></li>
+</ul>
+
+<p>that takes a list of integers and prints out the basic statistics, e.g.</p>
+
+<pre><code>    &gt;&gt;&gt; print_stats([1, 2, 3, 4, 5], title = 'Title')
+    Title
+    Minimum: 1
+    Maximum: 5
+    Mean: 3.0
+    Median: 3.0
+</code></pre>
+
+<ul>
+<li>Use the imported <code>get_stats()</code> function inside the <code>print_stats()</code> function to calculate the statistics of <code>input_list</code> and print them out.</li>
+</ul>
+
+<p>If the <code>get_stats()</code> function you wrote cannot handle <b>un</b>ordered lists, you have to first sort the <code>input_list</code> using <code>sort()</code> method or <code>sorted()</code> before passing it to <code>get_stats()</code>.</p>
+
+<p>In the <code>main()</code> function,</p>
+
+<ul>
+<li>Use <code>get_column()</code> to extract the weight, age, number of times married, and usual hours worked per week of every person in the Illinois census data.</li>
+<li>Use <code>print_stats()</code> to print out the minimum, maximum, mean, and median of the four columns,</li>
+</ul>
+
+<p>and finally,</p>
+
+<ul>
+<li>Rename <code>&lt;firstname&gt;-&lt;lastname&gt;-stats2.py</code> and upload it to Moodle.</li>
+</ul>
+
+<h3>Problem 2. Using a class to represent an individual person.</h3>
+
+<ul>
+<li>Grab the template file: <a href="https://github.com/INFO490/assignments/blob/master/hw3/FirstName-LastName-person.py">person.py</a>.</li>
+</ul>
+
+<p>Each row in the census data represents an individual person. Classes are a great way to represent this. Thus, we will create a class named <code>OnePerson</code> to represent an individual person (one row in the census file). The <code>OnePerson</code> class should have at minimum the following:</p>
+
+<ul>
+<li>Attributes: <br />
+<code>row</code> (a list that represents a person)</li>
+<li>Methods: <br />
+<code>__init__(self)</code> (the usual initializer), <br />
+<code>read_line(self, input_file, n)</code> (reads the specified row from the input file), <br />
+<code>print_column(self, n)</code> (prints out the specified column)</li>
+</ul>
+
+<p>In the <code>read_line()</code> method,</p>
+
+<ul>
+<li>Use a combination of <code>with</code> statement and <code>open()</code> function to open the <code>input_file</code>,</li>
+<li>Find the <code>n</code>-th line,</li>
+<li>Store that line in the <code>row</code> attribute as a list,</li>
+</ul>
+
+<p>In the the <code>print_column()</code> method,</p>
+
+<ul>
+<li>print out the column number <code>n</code> and the value contained in that column.</li>
+</ul>
+
+<p>In the <code>main()</code> function,</p>
+
+<ul>
+<li>Create an object named <code>person</code> using the <code>OnePerson</code> class.</li>
+<li>Use the <code>read_line()</code> method to read the 100th line of the census file.</li>
+<li>Use the <code>print_column()</code> method (in a loop) to print out the first 10 columns.</li>
+</ul>
+
+<p>The output should be</p>
+
+<pre><code>    Column 0 is: P
+    Column 1 is: 1142
+    Column 2 is: 01
+    Column 3 is: 03408
+    Column 4 is: 17
+    Column 5 is: 1010207
+    Column 6 is: 00203
+    Column 7 is: 43
+    Column 8 is: 5
+    Column 9 is:
+</code></pre>
+
+<ul>
+<li>Rename <code>&lt;firstname&gt;-&lt;lastname&gt;-person.py</code> and upload it to Moodle.</li>
+</ul>
+
+<h3>Problem 3. Simple statistics using Numpy.</h3>
+
+<ul>
+<li>Grab the template file: <a href="https://github.com/INFO490/assignments/blob/master/hw3/FirstName-LastName-npstats.py">npstats.py</a>.</li>
+</ul>
+
+<p>In this problem, you will reproduce the results of problem 1 using NumPy. First, you should get familiar with <code>numpy.loadtxt()</code>. In IPython, use the help magic function,</p>
+
+<pre><code>    In [1]: import numpy as np
+
+    In [2]: np.loadtxt?
+</code></pre>
+
+<p>or read <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.loadtxt.html">this webpage</a>.</p>
+
+<ul>
+<li>Write a function named <code>get_columns()</code> that takes the name of the file as the argument and returns a two-dimensional array of columns 6, 7, 39, and 72 (counting from 0).</li>
+</ul>
+
+<p>You will need to set the following parameters:</p>
+
+<ul>
+<li><code>delimiter</code></li>
+<li><code>converters</code></li>
+<li><code>skiprows</code></li>
+<li><code>usecols</code></li>
+</ul>
+
+<p>Do you remember from problem 1 that some columns had empty fields, which should actually be zero? The way to deal with missing values in <code>numpy.loadtxt()</code> is to set the <code>converters</code> parameter using <a href="https://docs.python.org/2/reference/expressions.html#lambda">lambda functions</a>:</p>
+
+<pre><code>    converters = {39: lambda x: float(x or 0), 72: lambda x: float(x or 0)}
+</code></pre>
+
+<p>As in problem 1, you should write a <code>print_stats()</code> function, but this time,</p>
+
+<ul>
+<li>Use NumPy methods: <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.min.html">numpy.min() or numpy.amin()</a>, numpy.max() or numpy.amax()](http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.max.html), <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html">numpy.mean()</a>, and <a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.median.html">numpy.median()</a>.</li>
+</ul>
+
+<p>In the <code>main()</code> function,</p>
+
+<ul>
+<li>use <code>get_columns()</code> and <code>print_stats()</code> to produce the statistics of weight, age, number of times married, and usual hours worked per week, with the same format from problem 1,</li>
+</ul>
+
+<p>and fianlly,</p>
+
+<ul>
+<li>Rename <code>&lt;firstname&gt;-&lt;lastname&gt;-npstats.py</code> and upload it to Moodle.</li>
+</ul>
+
+<p>Why use NumPy? In addition to providing useful mathematical functions, NumPy is much faster than pure Python. In IPython, you can determine how long a process takes to complete with <code>%time</code> or <code>%timeit</code>, or in the Unix environment, you can simply do</p>
+
+<pre><code>    $ time ./stats2.py
+
+    real    0m17.453s
+    user    0m16.640s
+    sys     0m0.492s
+
+    $ time ./npstats.py
+
+    real    0m8.560s
+    user    0m8.276s
+    sys     0m0.252s
+</code></pre>
+
+<p>For the task of calculating basic statistics of four columns in a CSV file with 127k rows, NumPy is twice as fast as pure Python on my computer.</p>
