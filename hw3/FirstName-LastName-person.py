@@ -8,8 +8,8 @@ class OnePerson:
       row(int): the row number in the data file
 
     Methods:
-      read_line(input_file, row)
-      print_column(column)
+      read_line(self, input_file, n)
+      print_column(self, n)
 
     Examples:
     >>> p = OnePerson()
@@ -34,9 +34,9 @@ class OnePerson:
         '''
         # your code goes here
         
-    def print_column(self, column):
+    def print_column(self, n):
         '''
-        Takes the column number(int) and prints out the corresponding 'column' of
+        Takes the column number 'n' and prints out the corresponding 'column' of
         the 'row' attribute.
         '''
         # your code goes here

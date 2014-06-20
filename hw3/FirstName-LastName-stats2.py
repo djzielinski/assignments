@@ -7,14 +7,14 @@ from __future__ import print_function, division
 # use get_stats() function from week 2 problem 3
 from stats import get_stats
 
-def get_column(filename, column, header = True):
+def get_column(filename, n, header = True):
     '''
     Returns a list from reading the specified column in the CSV file
 
     Parameters:
       filename(str): Input file name in Comma Separated Values (CSV) format
-      colnum(int): Column number. The first column starts at 0. The column must be
-                   a list of integers.
+      n(int): Column number. The first column starts at 0. The column must be
+              a list of integers.
       header(bool): If True, the first line of file is column names. Default: True.
 
     Examples:
