@@ -1,0 +1,33 @@
+<h2>Week 4 Assignment</h2>
+
+<h3>Problem 1. Trigonometric functions.</h3>
+
+<p>Create a simple plot that displays the sin(x) and cos(x) functions from x = -Pi to x = Pi. Use different colors for the two plots, which should be plotted in one figure. The plots should be properly labeled. Submit your plot via Moodle as a <code>.pdf</code> file for both instructor and peer assessment.</p>
+
+<ul>
+<li>Use <code>numpy.linspace()</code> to create an array of floats between <code>-numpy.pi</code> and <code>numpy.pi</code>.</li>
+<li>Use <code>numpy.sin()</code> and <code>numpy.cos()</code> functions on the arrays.</li>
+<li>Always label you axes.</li>
+</ul>
+
+<h3>Problem 2. Income Versus Age.</h3>
+
+<p>Using the Illinois census data <code>ss12pil.csv</code>, make a scatter plot of the age versus income of all respondents older than 18 and annual income in excess of $1000. Submit your plot via Moodle as a <code>.pdf</code> file for both instructor and peer assessment. Here are some hints:</p>
+
+<ul>
+<li>The column header for age is "AGEP".</li>
+<li>The column header for income is "PINCP".</li>
+<li>Persons less than 15 years old have no income values (blank fields).</li>
+<li>By now, you should know several ways to extract the columns you want from a file. To give you a few examples, you could use <code>awk</code> to extract the columns and save it in a separate file; you could write a simple loop generate lists in Python; or you could use <code>numpy.loadtxt()</code> and numpy arrays. Choose your favorite method.</li>
+<li>Always label your axes.</li>
+</ul>
+
+<h3>Problem 3. Age distribution of males and females.</h3>
+
+<p>Using the Illinois census data <code>ss12pil.csv</code>, create a plot that displays multiple histograms for the age distribution of males and females. You should use different colors for the two histograms, which should be plotted side-by-side (like the last histogram in the iPython notebook), and the two histograms should be properly labeled. Submit your plot via Moodle as a <code>.pdf</code> file for both instructor and peer assessment.</p>
+
+<ul>
+<li>The column header for sex is "SEX".</li>
+<li>1 in the "SEX" column corresponds to male; 2 female.</li>
+<li>Always label your axes.</li>
+</ul>
