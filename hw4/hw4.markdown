@@ -6,7 +6,7 @@ Create a simple plot that displays the sin(x) and cos(x) functions from x = -Pi 
 
 - Use `numpy.linspace()` to create an array of floats between `-numpy.pi` and `numpy.pi`.
 - Use `numpy.sin()` and `numpy.cos()` functions on the arrays.
-- Always label you axes. Your figure should have a descriptive title as well as your first and last name.
+- Always label you axes. Your figure should have a descriptive title, and also put your first and last name in the title.
 
 ### Problem 2. Income Versus Age.
 
@@ -16,7 +16,7 @@ Using the Illinois census data `ss12pil.csv`, make a scatter plot of the age ver
 - The column header for income is "PINCP".
 - Persons less than 15 years old have no income values (blank fields).
 - By now, you should know several ways to extract the columns you want from a file. To give you a few examples, you could use `awk` to extract the columns and save it in a separate file; you could write a simple loop generate lists in Python; or you could use `numpy.loadtxt()` and numpy arrays. Choose your favorite method.
-- Always label your axes. Your figure should have a descriptive title as well as your first and last name.
+- Always label your axes. Your figure should have a descriptive title, and also put your first and last name in the title.
 
 ### Problem 3. Age distribution of males and females.
 
