@@ -33,11 +33,11 @@ def welcome():
     Enter your name: World
     Hello, World!
     '''
-    
+    name = raw_input('Enter your name: ')
+    print('Hello, '+ name)
     ######### WRITE YOUR CODE HERE #########
 
     return None
     
 if __name__ == "__main__":
-
     welcome()
