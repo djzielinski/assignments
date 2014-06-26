@@ -28,9 +28,18 @@ def list_informatics():
     result = []
     
     ######### WRITE YOUR CODE HERE #########
-
+    for x in range(0,100):
+        if (x+1)%4==0 and x%6==0:
+            result[x]='informatics'
+        elif (x+1)%4==0:
+            result[x]='info'
+        elif (x+1)%6==0:
+            result[x]='matics'
+        else:
+            result[x]=str(x+1)
+    
     return result
 
 if __name__ == '__main__':
-
+    print(list_informatics())
     ######### WRITE YOUR CODE HERE #########
