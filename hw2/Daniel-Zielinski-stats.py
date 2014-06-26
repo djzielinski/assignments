@@ -39,11 +39,26 @@ def get_stats(input_list):
     ''' 
     
     ######### WRITE YOUR CODE HERE #########
+    mean = float(sum(input_list)/len(input_list))
+    minimum=int(input_list[0])
+    for x in input_list[1:]:
+        if x<minimum:
+            minimum=int(x)
+            
+    maximum=int(input_list[0])
+    for y in input_list[1:]:
+        if y>maximum:
+            maximum=int(y)
 
+    sortlist = sorted(input_list)
+    length = len(sortlist)
+    if not length % 2:
+        median=float((sortlist[length / 2] + sortlist[length / 2 - 1]) / 2.0)
+    else:
+        median=float(sortlist[length / 2])
+    
     return minimum, maximum, mean, median
     
 if __name__ == '__main__':
-
-    my_list = # Use range() to generate a list
-    
+    my_list = range(0,50),range(0,50),range(0,50),range(0,50)# Use range() to generate a list
     print("Minimum: %i\nMaximum: %i\nMean: %.1f\nMedian: %.1f" % get_stats(my_list))
